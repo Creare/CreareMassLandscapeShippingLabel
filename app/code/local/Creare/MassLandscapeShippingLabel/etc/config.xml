@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+  <modules> 
+  <Creare_MassLandscapeShippingLabel>
+    <version>0.1.0</version>
+    </Creare_MassLandscapeShippingLabel>
+  </modules> 
+  <global>
+    <blocks>
+		<adminhtml>
+			<rewrite>
+				<sales_order_grid>Creare_MassLandscapeShippingLabel_Block_Sales_Order_Grid</sales_order_grid>
+			</rewrite>
+			<rewrite>
+				<sales_order_view>Creare_MassLandscapeShippingLabel_Block_View_Masslandscapeshippinglabel</sales_order_view>
+			</rewrite>
+		</adminhtml>
+    </blocks>	
+  </global>
+  <admin>
+        <routers>
+            <creare_masslandscapeshippinglabel>
+                <use>admin</use>
+                <args>
+                    <module>Creare_MassLandscapeShippingLabel</module>
+                    <frontName>creareadmin</frontName>
+                </args>
+            </creare_masslandscapeshippinglabel>			
+			<adminhtml>
+				<args>
+				  <modules>
+					<creare_masslandscapeshippinglabel before="Mage_Adminhtml">Creare_MassLandscapeShippingLabel</creare_masslandscapeshippinglabel>
+				  </modules>
+				</args>
+			</adminhtml>
+        </routers>
+    </admin>
+</config>
